@@ -75,12 +75,13 @@
             </FrameLayout>
 
         <TextView
+            android:id="@+id/RemainWaste"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="남은쓰레기수 :"
+            android:text="남은쓰레기수 : "
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_alignBottom="@+id/image1"/>
+            android:layout_alignBottom="@+id/image1" />
 
         </RelativeLayout>
 

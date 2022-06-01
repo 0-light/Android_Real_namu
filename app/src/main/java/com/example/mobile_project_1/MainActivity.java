@@ -14,8 +14,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int click = 0; // 페트병그림 클릭 담을 변수
-    int pet,waste; //pet,쓰레기 개수
-    TextView secondtext,result;
+    int pet=5,waste=0; //pet,쓰레기 개수
+    TextView secondtext,result,remainwaste;
     String tmp;
 
 
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         secondtext = findViewById(R.id.second);
         result = (TextView) findViewById (R.id.Petresult);
+        remainwaste = (TextView) findViewById(R.id.RemainWaste);
 
         CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
             public void onTick(long l) {
@@ -54,10 +55,15 @@ public class MainActivity extends AppCompatActivity {
                     m_btn.setBackgroundResource(R.drawable.p3);
                 } else if (click == 20 ){
                     m_btn.setBackgroundResource(R.drawable.p4);
-
+                    m_btn.setBackground(null);
                     countDownTimer.cancel();
+                    pet--;
+                    waste++;
 
-                    result.setVisibility(View.VISIBLE);
+                   result.setText("페트병" + (pet+1) + "개 -> " + pet + "개\n" +
+                           "쓰레기" + (waste-1) + "개 -> " + waste + "개");
+                   result.setVisibility(View.VISIBLE);
+                   remainwaste.setVisibility(View.INVISIBLE);
                 }
             }
         });

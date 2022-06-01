@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_vertical|bottom"
+    android:padding="30dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/start"
+        android:layout_width="550px"
+        android:layout_height="120px"
+        android:text="게임시작"
+        android:textSize="40dp"
+        android:layout_gravity="center"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/help"
+        android:layout_width="550px"
+        android:layout_height="120px"
+        android:text="조작법"
+        android:textSize="40dp"
+        android:layout_gravity="center"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/gostart"
+        android:layout_width="550px"
+        android:layout_height="120px"
+        android:text="처음으로"
+        android:textSize="40dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

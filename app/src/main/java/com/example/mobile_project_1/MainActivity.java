@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
         result = (TextView) findViewById (R.id.Petresult);
         remainwaste = (TextView) findViewById(R.id.RemainWaste);
 
+        remainwaste.setText(remainwaste.getText() + String.valueOf(pet_1));
+
         CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
             public void onTick(long l) {
                 int num = (int)(l/1000);
@@ -63,14 +65,27 @@ public class MainActivity extends AppCompatActivity {
                         click = 0;
                         countDownTimer.start();
                         m_btn.setBackgroundResource(R.drawable.p0);
+                        r_pet = (pet_1-pet);
+
+                        remainwaste.setText("남은라벨갯수 : "+ String.valueOf(r_pet));
+
+                        if(r_pet == 0){
+                            m_btn.setBackground(null);
+                            result.setText("페트병" + (pet_1) + "개 -> " + (pet_1-pet) + "개\n" +
+                                    "쓰레기" + (waste_1) + "개 -> " + (waste) + "개");
+                            secondtext.setText("끝");
+                            result.setVisibility(View.VISIBLE);
+                            remainwaste.setVisibility(View.INVISIBLE);
+                        }
+
                     }
+
                     //pet = pet_1 - pet;
                     waste = waste_1 + waste;
             }
         });
 
-        // int r_pet = (pet_1-pet); 왜안됨????????????
-        remainwaste.setText(remainwaste.getText() + String.valueOf(r_pet));
+
 
         end.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

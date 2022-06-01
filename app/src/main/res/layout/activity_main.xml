@@ -59,29 +59,15 @@
                 android:background="@drawable/p0"
                 android:onClick="onButton1Clicked" />
 
-<!--            <FrameLayout-->
-<!--                android:layout_width="400dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:background="#00AAFF"-->
-<!--                android:layout_centerInParent="true"-->
-<!--                android:visibility="invisible"-->
-<!--                android:id="@+id/Petresult"-->
-<!--                >-->
 
-<!--                <TextView-->
-<!--                    android:layout_width="match_parent"-->
-<!--                    android:layout_height="match_parent"-->
-<!--                    android:text="몇개"/>-->
-
-<!--            </FrameLayout>-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="남은쓰레기수 :"
             android:textColor="@color/black"
             android:textSize="20sp"
-            android:layout_alignBottom="@+id/image1"
-            />
+            android:layout_alignBottom="@+id/image1"/>
+
         </RelativeLayout>
 
     </LinearLayout>

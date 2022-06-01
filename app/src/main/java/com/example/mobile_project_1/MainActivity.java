@@ -13,30 +13,28 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     int click = 0; // 페트병그림 클릭 담을 변수
-    int pet = 0; //pet 개수
+    int pet; //pet 개수
     TextView textView;
-    Button m_btn = (Button) findViewById(R.id.image1);
+
     //Button end = (Button) findViewById(R.id.end);
     //FrameLayout frameLayout;
 
-
     @Override
-
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Button m_btn = (Button) findViewById(R.id.image1);
+
         textView = findViewById(R.id.second);
         //frameLayout.findViewById(R.id.Petresult);
 
         CountDownTimer countDownTimer = new CountDownTimer(10000, 1000) {
-            @Override
             public void onTick(long l) {
                 int num = (int)(l/1000);
-                textView.setText(Integer.toString(num+1));
+                textView.setText(Integer.toString(num + 1));
             }
-            @Override
             public void onFinish() {
                 textView.setText("실패...");
             }
